@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if user and user.secret_number %}
+    <form method="post" action="/result">
+        <input type="text" name="guess" placeholder="Wprowadz swoja liczbe">
+        <br>
+        <button type="submit"> Sprawdz </button>
+    </form>
+{% else %}
+    <form method="post" action="/login">
+        <input type="text" name="user-name" placeholder="Wprowadz swoje imie"><br>
+        <input type="password" name="user-password" placeholder="Wprowadz swoje haslo"><br>
+        <input type="email" name="user-email" placeholder="Wprowadz swoj adres email"><br>
+
+        <button type="submit">Zatwierdz</button>
+    </form>
+{% endif %}
+{% endblock content %}

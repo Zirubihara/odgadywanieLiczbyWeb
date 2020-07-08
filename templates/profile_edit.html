@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %} Edycja profilu {% endblock title %}
+
+{% block content %}
+
+    <h2> Edytuj swój profil </h2>
+<form method="post">
+<p>Wprowadz swoje imie </p>
+<input type="text" value="{{user.name}}" name="profile-name">
+
+
+<p>Wprowadz nowy adres email</p>
+<input type="email" value="{{user.email}}" name="profile-email" >
+
+<button type="submit"> Zatwierdz zmiany </button>
+</form>
+{% endblock content %}

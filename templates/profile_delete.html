@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %} Usuń profil {% endblock title %}
+
+{% block content %}
+<form method="post">
+    <h3> Czy jesteś pewien, że chcesz usunąć swoje konto? </h3>
+    <button> Tak usuń konto</button>
+    <h4> <a href="/"> Nie, wróć na stronę główną </a> </h4>
+</form>
+{% endblock content%}
